@@ -1,6 +1,6 @@
 
 /* ---------------- FISH "CLASS" START -------------- */
-var FOLLOW_DISTANCE = 100;
+var FOLLOW_DISTANCE = 200;
 
 var Fish = function(id) {
 this.id = id;
@@ -171,15 +171,15 @@ context.rotate(r);
 
 
 
-var w = 100;
+var w = 25;
 var acc = py(f.dx - f.ox, f.dy - f.oy) / 0.05;
 
 // If a fish does a "flip", make it less wide
 if (acc > 1) {
-    w = 60 + 60 / acc; // Deafult was 10
+    w = 10 + 10 / acc; // Deafult was 10
 }
 
-context.drawImage(fishBitmap, 20, 20, w, 48);
+context.drawImage(fishBitmap, 5, 5, w, 12);
 context.rotate(-r);
 context.translate(-f.x, -f.y);
 }
